@@ -3,3 +3,4 @@ msrest.authentication
 array
 os
 PIL
+msrest==0.6.21
