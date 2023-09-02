@@ -1,5 +1,4 @@
 azure.cognitiveservices.vision.computervision
-msrest.authentication
 array
 os
 PIL
