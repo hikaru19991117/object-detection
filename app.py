@@ -4,9 +4,14 @@ from azure.cognitiveservices.vision.computervision.models import VisualFeatureTy
 from msrest.authentication import CognitiveServicesCredentials
 import os
 from PIL import Image
+import streamlit as st
+from PIL import ImageDraw
+from PIL import ImageFont
 
 subscription_key = os.environ["VISION_KEY"]
 endpoint = os.environ["VISION_ENDPOINT"]
+
+st.write(subscription_key)
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
@@ -30,10 +35,6 @@ def detect_objects(filepath):
     return objects
 
 local_image_path = r"C:\Users\池田　光\OneDrive\Pictures\IMG_8043.JPG"
-
-import streamlit as st
-from PIL import ImageDraw
-from PIL import ImageFont
 
 st.title('物体検出アプリ')
 
