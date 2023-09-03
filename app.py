@@ -11,8 +11,6 @@ from PIL import ImageFont
 subscription_key = os.environ["VISION_KEY"]
 endpoint = os.environ["VISION_ENDPOINT"]
 
-st.write(subscription_key)
-
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
 def get_tags(filepath):
