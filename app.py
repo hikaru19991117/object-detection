@@ -44,11 +44,11 @@ def detect_objects(filepath):
     return objects
 
 try:
-    logging.info('処理開始')
     st.title('物体検出アプリ')
 
     uploaded_file = st.file_uploader('Choose an image...',type=['jpg', 'png'])
-
+    logging.info('処理開始')
+    
     if uploaded_file is not None:
         img = Image.open(uploaded_file)
         img_path = f'img/{uploaded_file.name}'
